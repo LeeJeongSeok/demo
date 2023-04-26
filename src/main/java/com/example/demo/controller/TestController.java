@@ -2,8 +2,6 @@ package com.example.demo.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 public class TestController {
@@ -13,9 +11,14 @@ public class TestController {
 		return "index";
 	}
 
-	@PostMapping("/")
+	@GetMapping("/list")
 	public String test2() {
-		return "Hello World";
+		return "orders/orderList";
+	}
+
+	@GetMapping("/default")
+	public String test3() {
+		return "layout/default";
 	}
 
 }
